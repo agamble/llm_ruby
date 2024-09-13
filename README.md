@@ -13,13 +13,13 @@ gem 'llm_ruby'
 And then execute:
 
 ```
-$ bundle install
+bundle install
 ```
 
 Or install it yourself as:
 
 ```
-$ gem install llm_ruby
+gem install llm_ruby
 ```
 
 ## Usage
@@ -101,30 +101,32 @@ puts "Raw response: #{response.raw_response}"
 puts "Stop reason: #{response.stop_reason}"
 ```
 
-
 ## Available Models
 
 LLMRuby supports various OpenAI models, including GPT-3.5 and GPT-4 variants. You can see the full list of supported models in the `KNOWN_MODELS` constant:
 
-| Canonical Name            | Display Name           | Provider |
-|---------------------------|------------------------|----------|
-| gpt-3.5-turbo             | GPT-3.5 Turbo          | openai   |
-| gpt-3.5-turbo-0125        | GPT-3.5 Turbo 0125     | openai   |
-| gpt-3.5-turbo-16k         | GPT-3.5 Turbo 16K      | openai   |
-| gpt-3.5-turbo-1106        | GPT-3.5 Turbo 1106     | openai   |
-| gpt-4                     | GPT-4                  | openai   |
-| gpt-4-32k                 | GPT-4 32K              | openai   |
-| gpt-4-1106-preview        | GPT-4 Turbo 1106       | openai   |
-| gpt-4-turbo-2024-04-09    | GPT-4 Turbo 2024-04-09 | openai   |
-| gpt-4-0125-preview        | GPT-4 Turbo 0125       | openai   |
-| gpt-4-turbo-preview       | GPT-4 Turbo            | openai   |
-| gpt-4-0613                | GPT-4 0613             | openai   |
-| gpt-4-32k-0613            | GPT-4 32K 0613         | openai   |
-| gpt-4o                    | GPT-4o                 | openai   |
-| gpt-4o-mini               | GPT-4o Mini            | openai   |
-| gpt-4o-2024-05-13         | GPT-4o 2024-05-13      | openai   |
-| gpt-4o-2024-08-06         | GPT-4o 2024-08-06      | openai   |
-
+| Canonical Name             | Display Name                  | Provider  |
+|----------------------------|-------------------------------|-----------|
+| gpt-3.5-turbo              | GPT-3.5 Turbo                 | openai    |
+| gpt-3.5-turbo-0125         | GPT-3.5 Turbo 0125            | openai    |
+| gpt-3.5-turbo-16k          | GPT-3.5 Turbo 16K             | openai    |
+| gpt-3.5-turbo-1106         | GPT-3.5 Turbo 1106            | openai    |
+| gpt-4                      | GPT-4                         | openai    |
+| gpt-4-32k                  | GPT-4 32K                     | openai    |
+| gpt-4-1106-preview         | GPT-4 Turbo 1106              | openai    |
+| gpt-4-turbo-2024-04-09     | GPT-4 Turbo 2024-04-09        | openai    |
+| gpt-4-0125-preview         | GPT-4 Turbo 0125              | openai    |
+| gpt-4-turbo-preview        | GPT-4 Turbo                   | openai    |
+| gpt-4-0613                 | GPT-4 0613                    | openai    |
+| gpt-4-32k-0613             | GPT-4 32K 0613                | openai    |
+| gpt-4o                     | GPT-4o                        | openai    |
+| gpt-4o-mini                | GPT-4o Mini                   | openai    |
+| gpt-4o-2024-05-13          | GPT-4o 2024-05-13             | openai    |
+| gpt-4o-2024-08-06          | GPT-4o 2024-08-06             | openai    |
+| claude-3-5-sonnet-20240620 | Claude 3.5 Sonnet 2024-06-20  | anthropic |
+| claude-3-opus-20240229     | Claude 3.5 Opus 2024-02-29    | anthropic |
+| claude-3-sonnet-20240229   | Claude 3.5 Sonnet 2024-02-29  | anthropic |
+| claude-3-haiku-20240307    | Claude 3.5 Opus 2024-03-07    | anthropic |
 
 ## Configuration
 
@@ -142,7 +144,7 @@ To install this gem onto your local machine, run `bundle exec rake install`.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/contextco/llm_ruby.
+Bug reports and pull requests are welcome on GitHub at <https://github.com/contextco/llm_ruby>.
 
 ## License
 
