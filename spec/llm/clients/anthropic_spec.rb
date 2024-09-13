@@ -6,7 +6,7 @@ RSpec.describe LLM::Clients::Anthropic do
   describe "#chat" do
     let(:llm) { LLM.from_string!("claude-3-haiku-20240307") }
     let(:client) { described_class.new(llm: llm) }
-    subject(:response) { client.chat([{role: :user, content: "hello world"}], max_output_tokens: 100) }
+    subject(:response) { client.chat([{ role: :user, content: "hello world" }], max_output_tokens: 100) }
 
     shared_examples "a method that generates a response value" do
       it "returns a response" do |example|
@@ -39,7 +39,7 @@ RSpec.describe LLM::Clients::Anthropic do
     context "when streaming" do
       subject(:response) {
         client.chat(
-          [{role: :user, content: "hello world"}],
+          [{ role: :user, content: "hello world" }],
           stream: true,
           max_output_tokens: 100,
           on_message: on_message,
@@ -56,6 +56,18 @@ RSpec.describe LLM::Clients::Anthropic do
         with_vcr(example) do
           expect(response.content).to be_a(String)
         end
+      end
+
+      context 'when the on_message callback is not provided' do
+        let(:on_message) { nil }
+
+        it_behaves_like "a method that generates a response value"
+      end
+
+      context 'when the on_complete callback is not provided' do
+        let(:on_complete) { nil }
+
+        it_behaves_like "a method that generates a response value"
       end
     end
   end
