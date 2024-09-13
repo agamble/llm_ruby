@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative "lib/llm"
-
 Gem::Specification.new do |spec|
   spec.name = "llm_ruby"
   spec.version = "0.1.0"
