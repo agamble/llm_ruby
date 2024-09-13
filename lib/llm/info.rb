@@ -89,6 +89,11 @@ module LLM::Info
       canonical_name: "gpt-4o-2024-08-06",
       display_name: "GPT-4o 2024-08-06",
       provider: :openai
+    },
+    {
+      canonical_name: "claude-3-5-sonnet-20240620",
+      display_name: "Claude 3.5 Sonnet 2024-06-20",
+      provider: :anthropic
     }
   ].freeze
 end
