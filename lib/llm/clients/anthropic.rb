@@ -52,10 +52,10 @@ class LLM::Clients::Anthropic
       when "content_block_delta"
         new_content = chunk.dig("delta", "text")
         buffer << new_content
-        on_message_proc.call(new_content)
+        on_message_proc&.call(new_content)
       when "message_delta"
         finish_reason = chunk.dig("delta", "stop_reason")
-        on_complete_proc.call(finish_reason)
+        on_complete_proc&.call(finish_reason)
       else
         next
       end
