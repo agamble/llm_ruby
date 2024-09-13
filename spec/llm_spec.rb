@@ -22,9 +22,9 @@ RSpec.describe LLM do
   end
 
   describe "#client" do
-    LLM.all!.each do |llm|
-      it "returns a client for #{llm.canonical_name}" do
-        expect(llm.client).to be_a(LLM::Clients::OpenAI)
+    LLM::Info::KNOWN_MODELS.each do |llm|
+      it "returns a client for #{llm[:canonical_name]}" do
+        expect(LLM.from_string!(llm[:canonical_name]).client).to be_a(llm[:client_class])
       end
     end
   end
