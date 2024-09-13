@@ -15,6 +15,7 @@ VCR.configure do |c|
     match_requests_on: [:method, :uri]
   }
   c.filter_sensitive_data("<OPENAI_API_KEY>") { ENV["OPENAI_API_KEY"] }
+  c.filter_sensitive_data("<ANTHROPIC_API_KEY>") { ENV["ANTHROPIC_API_KEY"] }
 end
 
 RSpec.configure do |config|
