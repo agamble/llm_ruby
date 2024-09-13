@@ -130,6 +130,12 @@ module LLM::Info
       display_name: "Claude 3.5 Opus 2024-03-07",
       provider: :anthropic,
       client_class: LLM::Clients::Anthropic
-    }
+    },
+    {
+      canonical_name: "gemini-1.5-flash",
+      display_name: "Gemini 1.5 Flash",
+      provider: :google,
+      client_class: LLM::Clients::Gemini
+    },
   ].freeze
 end
