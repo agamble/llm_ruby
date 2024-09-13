@@ -57,6 +57,18 @@ RSpec.describe LLM::Clients::Anthropic do
           expect(response.content).to be_a(String)
         end
       end
+
+      context "when the on_message callback is not provided" do
+        let(:on_message) { nil }
+
+        it_behaves_like "a method that generates a response value"
+      end
+
+      context "when the on_complete callback is not provided" do
+        let(:on_complete) { nil }
+
+        it_behaves_like "a method that generates a response value"
+      end
     end
   end
 end
