@@ -13,7 +13,7 @@ class LLM
     @canonical_name = model[:canonical_name]
     @display_name = model[:display_name]
     @provider = model[:provider]
-    @client_class = LLM::Clients::OpenAI # TODO: Allow alternative client classes.
+    @client_class = model[:client_class]
   end
 
   def client
