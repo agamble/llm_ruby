@@ -14,6 +14,7 @@ class LLM
     @display_name = model[:display_name]
     @provider = model[:provider]
     @client_class = model[:client_class]
+    @default_params = model[:additional_default_required_parameters] || {}
   end
 
   def client
@@ -22,7 +23,8 @@ class LLM
 
   attr_reader :canonical_name,
     :display_name,
-    :provider
+    :provider,
+    :default_params
 
   private
 

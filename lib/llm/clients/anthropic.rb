@@ -79,7 +79,7 @@ class LLM::Clients::Anthropic
       system: combined_system_messages(messages),
       messages: messages.filter { |m| m[:role].to_sym != :system },
       model: @llm.canonical_name,
-      max_tokens: options[:max_output_tokens],
+      max_tokens: options[:max_output_tokens] || @llm.default_params[:max_output_tokens],
       temperature: options[:temperature],
       top_p: options[:top_p],
       top_k: options[:top_k],
