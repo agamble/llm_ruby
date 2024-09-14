@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.anthropic.com/v1/messages
+    body:
+      encoding: UTF-8
+      string: '{"system":"","messages":[{"role":"user","content":"hello world"}],"model":"claude-3-haiku-20240307","max_tokens":4096}'
+    headers:
+      Anthropic-Version:
+      - '2023-06-01'
+      X-Api-Key:
+      - "<ANTHROPIC_API_KEY>"
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 14 Sep 2024 23:45:31 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Anthropic-Ratelimit-Requests-Limit:
+      - '1000'
+      Anthropic-Ratelimit-Requests-Remaining:
+      - '999'
+      Anthropic-Ratelimit-Requests-Reset:
+      - '2024-09-14T23:45:36Z'
+      Anthropic-Ratelimit-Tokens-Limit:
+      - '100000'
+      Anthropic-Ratelimit-Tokens-Remaining:
+      - '100000'
+      Anthropic-Ratelimit-Tokens-Reset:
+      - '2024-09-14T23:45:31Z'
+      Request-Id:
+      - req_01Gd3AcE2WZiMzbvQEeBrWwN
+      X-Cloud-Trace-Context:
+      - 63357fe7ffeea3b4190e25649ea68400
+      Via:
+      - 1.1 google
+      Cf-Cache-Status:
+      - DYNAMIC
+      X-Robots-Tag:
+      - none
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8c34404618fb06fd-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"msg_01TMsJkc6mZ3wpYJu4bRgUjn","type":"message","role":"assistant","model":"claude-3-haiku-20240307","content":[{"type":"text","text":"Hello!
+        As an AI language model, I''m here to assist you with any questions or tasks
+        you may have. How can I help you today?"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":9,"output_tokens":33}}'
+  recorded_at: Sat, 14 Sep 2024 23:45:31 GMT
+recorded_with: VCR 6.3.1

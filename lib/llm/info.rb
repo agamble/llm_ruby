@@ -111,25 +111,37 @@ module LLM::Info
       canonical_name: "claude-3-5-sonnet-20240620",
       display_name: "Claude 3.5 Sonnet 2024-06-20",
       provider: :anthropic,
-      client_class: LLM::Clients::Anthropic
+      client_class: LLM::Clients::Anthropic,
+      additional_default_required_parameters: {
+        max_output_tokens: 8192,
+      }
     },
     {
       canonical_name: "claude-3-opus-20240229",
       display_name: "Claude 3.5 Opus 2024-02-29",
       provider: :anthropic,
-      client_class: LLM::Clients::Anthropic
+      client_class: LLM::Clients::Anthropic,
+      additional_default_required_parameters: {
+        max_output_tokens: 4096,
+      }
     },
     {
       canonical_name: "claude-3-sonnet-20240229",
       display_name: "Claude 3.5 Sonnet 2024-02-29",
       provider: :anthropic,
-      client_class: LLM::Clients::Anthropic
+      client_class: LLM::Clients::Anthropic,
+      additional_default_required_parameters: {
+        max_output_tokens: 4096,
+      }
     },
     {
       canonical_name: "claude-3-haiku-20240307",
       display_name: "Claude 3.5 Opus 2024-03-07",
       provider: :anthropic,
-      client_class: LLM::Clients::Anthropic
+      client_class: LLM::Clients::Anthropic,
+      additional_default_required_parameters: {
+        max_output_tokens: 4096,
+      }
     },
     {
       canonical_name: "gemini-1.5-flash",
