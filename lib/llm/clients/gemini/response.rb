@@ -13,6 +13,19 @@ class LLM::Clients::Gemini::Response
     )
   end
 
+  def self.normalize_stop_reason(stop_reason)
+    case stop_reason
+    when "STOP"
+      LLM::StopReason::STOP
+    when "MAX_TOKENS"
+      LLM::StopReason::MAX_TOKENS
+    when "SAFETY"
+      LLM::StopReason::SAFETY
+    else
+      LLM::StopReason::OTHER
+    end
+  end
+
   private
 
   attr_reader :raw_response
@@ -26,16 +39,7 @@ class LLM::Clients::Gemini::Response
   end
 
   def translated_stop_reason
-    case stop_reason
-    when "STOP"
-      LLM::StopReason::STOP
-    when "MAX_TOKENS"
-      LLM::StopReason::MAX_TOKENS
-    when "SAFETY"
-      LLM::StopReason::SAFETY
-    else
-      LLM::StopReason::OTHER
-    end
+    self.class.normalize_stop_reason(stop_reason)
   end
 
   def parsed_response
