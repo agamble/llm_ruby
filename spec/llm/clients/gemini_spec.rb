@@ -35,5 +35,11 @@ RSpec.describe LLM::Clients::Gemini do
     end
 
     it_behaves_like "a method that generates a response value"
+
+    context "when the response is streamed" do
+      subject(:response) { client.chat([{role: :user, content: "hello world"}], stream: true) }
+
+      it_behaves_like "a method that generates a response value"
+    end
   end
 end
