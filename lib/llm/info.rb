@@ -148,6 +148,24 @@ module LLM::Info
       display_name: "Gemini 1.5 Flash",
       provider: :google,
       client_class: LLM::Clients::Gemini
+    },
+    {
+      canonical_name: "gemini-1.5-pro",
+      display_name: "Gemini 1.5 Pro",
+      provider: :google,
+      client_class: LLM::Clients::Gemini
+    },
+    {
+      canonical_name: "gemini-1.5-pro-exp-0827",
+      display_name: "Gemini 1.5 Pro Experimental 2024-08-27",
+      provider: :google,
+      client_class: LLM::Clients::Gemini
+    },
+    {
+      canonical_name: "gemini-1.5-flash-exp-0827",
+      display_name: "Gemini 1.5 Flash Experimental 2024-08-27",
+      provider: :google,
+      client_class: LLM::Clients::Gemini
     }
   ].freeze
 end
