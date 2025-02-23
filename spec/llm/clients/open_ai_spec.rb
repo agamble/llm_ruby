@@ -5,10 +5,10 @@ require "support/basic_chat_examples"
 require "support/streaming_chat_examples"
 
 RSpec.describe LLM::Clients::OpenAI do
-  model_name = "gpt-4o-mini"
-
-  describe "#chat" do
-    it_behaves_like "a model that supports basic chat", llm_canonical_name: model_name
-    it_behaves_like "a model that supports streaming responses", llm_canonical_name: model_name
+  LLM.all!.select { |model| model.provider == :openai }.each do |model|
+    describe "#chat" do
+      it_behaves_like "a model that supports basic chat", llm_canonical_name: model.canonical_name
+      it_behaves_like "a model that supports streaming responses", llm_canonical_name: model.canonical_name
+    end
   end
 end
