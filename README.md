@@ -1,6 +1,6 @@
 # LLMRuby
 
-LLMRuby is a Ruby gem that provides a consistent interface for interacting with various Large Language Model (LLM) APIs, with a current focus on OpenAI's models.
+LLMRuby is a Ruby gem that provides a consistent interface for interacting with multiple Large Language Model (LLM) APIs. Most OpenAI, Anthropic and Gemini models are currently supported.
 
 ## Installation
 
@@ -158,10 +158,12 @@ LLMRuby supports various OpenAI models, including GPT-3.5 and GPT-4 variants. Yo
 
 ## Configuration
 
-Set your OpenAI API key as an environment variable:
+Set your OpenAI, Anthropic or Google API key as an environment variable:
 
 ```shell
 export OPENAI_API_KEY=your_api_key_here
+export ANTHROPIC_API_KEY=your_api_key_here
+export GEMINI_API_KEY=your_api_key_here
 ```
 
 ## Development
