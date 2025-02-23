@@ -87,7 +87,7 @@ Here is an example of how to use the response object:
 
 ```ruby
 # Initialize an LLM instance
-llm = LLM.from_string!("gpt-4")
+llm = LLM.from_string!("gpt-4o")
 
 # Create a client
 client = llm.client
@@ -114,22 +114,33 @@ LLMRuby supports various OpenAI models, including GPT-3.5 and GPT-4 variants. Yo
 | gpt-3.5-turbo-16k          | GPT-3.5 Turbo 16K                    |
 | gpt-3.5-turbo-1106         | GPT-3.5 Turbo 1106                   |
 | gpt-4                      | GPT-4                                |
-| gpt-4-32k                  | GPT-4 32K                            |
 | gpt-4-1106-preview         | GPT-4 Turbo 1106                     |
 | gpt-4-turbo-2024-04-09     | GPT-4 Turbo 2024-04-09               |
 | gpt-4-0125-preview         | GPT-4 Turbo 0125                     |
 | gpt-4-turbo-preview        | GPT-4 Turbo                          |
 | gpt-4-0613                 | GPT-4 0613                           |
-| gpt-4-32k-0613             | GPT-4 32K 0613                       |
 | gpt-4o                     | GPT-4o                               |
 | gpt-4o-mini                | GPT-4o Mini                          |
+| gpt-4o-mini-2024-07-18     | GPT-4o Mini 2024-07-18               |
 | gpt-4o-2024-05-13          | GPT-4o 2024-05-13                    |
 | gpt-4o-2024-08-06          | GPT-4o 2024-08-06                    |
+| gpt-4o-2024-11-20          | GPT-4o 2024-11-20                    |
+| chatgpt-4o-latest          | ChatGPT 4o Latest                    |
+| o1                         | o1                                   |
+| o1-2024-12-17              | o1 2024-12-17                        |
+| o1-preview                 | o1 Preview                           |
+| o1-preview-2024-09-12      | o1 Preview 2024-09-12                |
+| o1-mini                    | o1 Mini                              |
+| o1-mini-2024-09-12         | o1 Mini 2024-09-12                   |
+| o3-mini                    | o3 Mini                              |
+| o3-mini-2025-01-31         | o3 Mini 2025-01-31                   |
 
 ### Anthropic Models
 
 | Canonical Name             | Display Name                         |
 |----------------------------|--------------------------------------|
+| claude-3-5-sonnet-20241022 | Claude 3.5 Sonnet 2024-10-22         |
+| claude-3-5-haiku-20241022  | Claude 3.5 Haiku 2024-10-22          |
 | claude-3-5-sonnet-20240620 | Claude 3.5 Sonnet 2024-06-20         |
 | claude-3-opus-20240229     | Claude 3.5 Opus 2024-02-29           |
 | claude-3-sonnet-20240229   | Claude 3.5 Sonnet 2024-02-29         |
@@ -141,8 +152,6 @@ LLMRuby supports various OpenAI models, including GPT-3.5 and GPT-4 variants. Yo
 |---------------------------|------------------------------------------|
 | gemini-1.5-flash          | Gemini 1.5 Flash                         |
 | gemini-1.5-pro            | Gemini 1.5 Pro                           |
-| gemini-1.5-pro-exp-0827   | Gemini 1.5 Pro Experimental 2024-08-27   |
-| gemini-1.5-flash-exp-0827 | Gemini 1.5 Flash Experimental 2024-08-27 |
 
 ## Configuration
 
