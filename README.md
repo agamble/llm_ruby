@@ -1,5 +1,7 @@
 # LLMRuby
 
+[![Gem Version](https://badge.fury.io/rb/llm_ruby.svg)](https://badge.fury.io/rb/llm_ruby)
+
 LLMRuby is a Ruby gem that provides a consistent interface for interacting with multiple Large Language Model (LLM) APIs. Most OpenAI, Anthropic and Gemini models are currently supported.
 
 ## Installation
