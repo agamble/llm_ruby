@@ -42,12 +42,6 @@ module LLM::Info
       client_class: LLM::Clients::OpenAI
     },
     {
-      canonical_name: "gpt-4-32k",
-      display_name: "GPT-4 32K",
-      provider: :openai,
-      client_class: LLM::Clients::OpenAI
-    },
-    {
       canonical_name: "gpt-4-1106-preview",
       display_name: "GPT-4 Turbo 1106",
       provider: :openai,
@@ -78,12 +72,6 @@ module LLM::Info
       client_class: LLM::Clients::OpenAI
     },
     {
-      canonical_name: "gpt-4-32k-0613",
-      display_name: "GPT-4 32K 0613",
-      provider: :openai,
-      client_class: LLM::Clients::OpenAI
-    },
-    {
       canonical_name: "gpt-4o",
       display_name: "GPT-4o",
       provider: :openai,
@@ -92,6 +80,12 @@ module LLM::Info
     {
       canonical_name: "gpt-4o-mini",
       display_name: "GPT-4o Mini",
+      provider: :openai,
+      client_class: LLM::Clients::OpenAI
+    },
+    {
+      canonical_name: "gpt-4o-mini-2024-07-18",
+      display_name: "GPT-4o Mini 2024-07-18",
       provider: :openai,
       client_class: LLM::Clients::OpenAI
     },
@@ -106,6 +100,86 @@ module LLM::Info
       display_name: "GPT-4o 2024-08-06",
       provider: :openai,
       client_class: LLM::Clients::OpenAI
+    },
+    {
+      canonical_name: 'gpt-4o-2024-11-20',
+      display_name: 'GPT-4o 2024-11-20',
+      provider: :openai,
+      client_class: LLM::Clients::OpenAI
+    },
+    {
+      canonical_name: 'chatgpt-4o-latest',
+      display_name: 'ChatGPT 4o Latest',
+      provider: :openai,
+      client_class: LLM::Clients::OpenAI
+    },
+    {
+      canonical_name: 'o1',
+      display_name: 'o1',
+      provider: :openai,
+      client_class: LLM::Clients::OpenAI
+    },
+    {
+      canonical_name: 'o1-2024-12-17',
+      display_name: 'o1 2024-12-17',
+      provider: :openai,
+      client_class: LLM::Clients::OpenAI
+    },
+    {
+      canonical_name: 'o1-preview',
+      display_name: 'o1 Preview',
+      provider: :openai,
+      client_class: LLM::Clients::OpenAI
+    },
+    {
+      canonical_name: 'o1-preview-2024-09-12',
+      display_name: 'o1 Preview 2024-09-12',
+      provider: :openai,
+      client_class: LLM::Clients::OpenAI
+    },
+    {
+      canonical_name: 'o1-mini',
+      display_name: 'o1 Mini',
+      provider: :openai,
+      client_class: LLM::Clients::OpenAI
+    },
+    {
+      canonical_name: 'o1-mini-2024-09-12',
+      display_name: 'o1 Mini 2024-09-12',
+      provider: :openai,
+      client_class: LLM::Clients::OpenAI
+    },
+    {
+      canonical_name: 'o3-mini',
+      display_name: 'o3 Mini',
+      provider: :openai,
+      client_class: LLM::Clients::OpenAI
+    },
+    {
+      canonical_name: 'o3-mini-2025-01-31',
+      display_name: 'o3 Mini 2025-01-31',
+      provider: :openai,
+      client_class: LLM::Clients::OpenAI
+    },
+
+    # Anthropic Models
+    {
+      canonical_name: 'claude-3-5-sonnet-20241022',
+      display_name: 'Claude 3.5 Sonnet 2024-10-22',
+      provider: :anthropic,
+      client_class: LLM::Clients::Anthropic,
+      additional_default_required_parameters: {
+        max_output_tokens: 8192
+      }
+    },
+    {
+      canonical_name: 'claude-3-5-haiku-20241022',
+      display_name: 'Claude 3.5 Haiku 2024-10-22',
+      provider: :anthropic,
+      client_class: LLM::Clients::Anthropic,
+      additional_default_required_parameters: {
+        max_output_tokens: 8192
+      }
     },
     {
       canonical_name: "claude-3-5-sonnet-20240620",
@@ -155,17 +229,5 @@ module LLM::Info
       provider: :google,
       client_class: LLM::Clients::Gemini
     },
-    {
-      canonical_name: "gemini-1.5-pro-exp-0827",
-      display_name: "Gemini 1.5 Pro Experimental 2024-08-27",
-      provider: :google,
-      client_class: LLM::Clients::Gemini
-    },
-    {
-      canonical_name: "gemini-1.5-flash-exp-0827",
-      display_name: "Gemini 1.5 Flash Experimental 2024-08-27",
-      provider: :google,
-      client_class: LLM::Clients::Gemini
-    }
   ].freeze
 end
