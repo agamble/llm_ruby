@@ -172,12 +172,8 @@ To install this gem onto your local machine, run `bundle exec rake install`.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at <https://github.com/contextco/llm_ruby>.
+Bug reports and pull requests are welcome.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Acknowledgements
-
-This gem is developed and maintained by [Context](https://context.ai).

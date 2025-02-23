@@ -4,15 +4,14 @@ Gem::Specification.new do |spec|
   spec.name = "llm_ruby"
   spec.version = "0.1.0"
   spec.authors = ["Alex Gamble"]
-  spec.email = ["alex@context.ai", "alec@context.ai"]
 
   spec.summary = "A client to interact with LLM APIs in a consistent way."
-  spec.homepage = "https://context.ai"
+  spec.homepage = "https://github.com/agamble/llm_ruby"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.1.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/contextco/llm_ruby"
+  spec.metadata["source_code_uri"] = "https://github.com/agamble/llm_ruby"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
