@@ -12,7 +12,8 @@ class LLM
           LLM::Response.new(
             content: content,
             raw_response: parsed_response,
-            stop_reason: normalize_stop_reason
+            stop_reason: normalize_stop_reason,
+            structured_output: structured_output
           )
         end
 
@@ -41,6 +42,12 @@ class LLM
 
         def parsed_response
           @raw_response.parsed_response
+        end
+
+        def structured_output
+          JSON.parse(parsed_response.dig("choices", 0, "message", "content"))
+        rescue JSON::ParserError
+          nil
         end
       end
     end

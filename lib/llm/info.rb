@@ -76,19 +76,22 @@ class LLM
         canonical_name: "gpt-4o",
         display_name: "GPT-4o",
         provider: :openai,
-        client_class: LLM::Clients::OpenAI
+        client_class: LLM::Clients::OpenAI,
+        supports_structured_outputs: true
       },
       {
         canonical_name: "gpt-4o-mini",
         display_name: "GPT-4o Mini",
         provider: :openai,
-        client_class: LLM::Clients::OpenAI
+        client_class: LLM::Clients::OpenAI,
+        supports_structured_outputs: true
       },
       {
         canonical_name: "gpt-4o-mini-2024-07-18",
         display_name: "GPT-4o Mini 2024-07-18",
         provider: :openai,
-        client_class: LLM::Clients::OpenAI
+        client_class: LLM::Clients::OpenAI,
+        supports_structured_outputs: true
       },
       {
         canonical_name: "gpt-4o-2024-05-13",
@@ -100,13 +103,15 @@ class LLM
         canonical_name: "gpt-4o-2024-08-06",
         display_name: "GPT-4o 2024-08-06",
         provider: :openai,
-        client_class: LLM::Clients::OpenAI
+        client_class: LLM::Clients::OpenAI,
+        supports_structured_outputs: true
       },
       {
         canonical_name: "gpt-4o-2024-11-20",
         display_name: "GPT-4o 2024-11-20",
         provider: :openai,
-        client_class: LLM::Clients::OpenAI
+        client_class: LLM::Clients::OpenAI,
+        supports_structured_outputs: true
       },
       {
         canonical_name: "chatgpt-4o-latest",
@@ -118,13 +123,15 @@ class LLM
         canonical_name: "o1",
         display_name: "o1",
         provider: :openai,
-        client_class: LLM::Clients::OpenAI
+        client_class: LLM::Clients::OpenAI,
+        supports_structured_outputs: true
       },
       {
         canonical_name: "o1-2024-12-17",
         display_name: "o1 2024-12-17",
         provider: :openai,
-        client_class: LLM::Clients::OpenAI
+        client_class: LLM::Clients::OpenAI,
+        supports_structured_outputs: true
       },
       {
         canonical_name: "o1-preview",
@@ -154,13 +161,15 @@ class LLM
         canonical_name: "o3-mini",
         display_name: "o3 Mini",
         provider: :openai,
-        client_class: LLM::Clients::OpenAI
+        client_class: LLM::Clients::OpenAI,
+        supports_structured_outputs: true
       },
       {
         canonical_name: "o3-mini-2025-01-31",
         display_name: "o3 Mini 2025-01-31",
         provider: :openai,
-        client_class: LLM::Clients::OpenAI
+        client_class: LLM::Clients::OpenAI,
+        supports_structured_outputs: true
       },
 
       # Anthropic Models
