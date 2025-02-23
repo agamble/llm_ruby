@@ -1,0 +1,86 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"o1-2024-12-17","messages":[{"role":"user","content":"hello
+        world"}],"max_tokens":100,"stream":true}'
+    headers:
+      Authorization:
+      - Bearer <OPENAI_API_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Sun, 23 Feb 2025 14:30:53 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '245'
+      Connection:
+      - keep-alive
+      Access-Control-Expose-Headers:
+      - X-Request-ID
+      Openai-Organization:
+      - context-ai
+      Openai-Processing-Ms:
+      - '10'
+      Openai-Version:
+      - '2020-10-01'
+      X-Ratelimit-Limit-Requests:
+      - '1000'
+      X-Ratelimit-Limit-Tokens:
+      - '30000000'
+      X-Ratelimit-Remaining-Requests:
+      - '999'
+      X-Ratelimit-Remaining-Tokens:
+      - '29999895'
+      X-Ratelimit-Reset-Requests:
+      - 60ms
+      X-Ratelimit-Reset-Tokens:
+      - 0s
+      X-Request-Id:
+      - req_442f7637bbb67eb52c80d527f0d7da87
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=HEtPFRyqy7qOFYULDKUnFADjaSGj9tAY3CB55quwqRo-1740321053-1.0.1.1-CTCt2g2D6zTooS5C4n25ZsX2xUI69rDWTCH7PGfN6W2f3YHhO1NEfnweCDfBKo_IwMkFY1O3bvFMoH08JYg_vA;
+        path=/; expires=Sun, 23-Feb-25 15:00:53 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=v.6Rq3wP1xjUFbJf9tQRCrYZ9Jd2GhNS9Dicr88vk28-1740321053613-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 9167ea981997e15e-MRS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "error": {
+            "message": "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.",
+            "type": "invalid_request_error",
+            "param": "max_tokens",
+            "code": "unsupported_parameter"
+          }
+        }
+  recorded_at: Sun, 23 Feb 2025 14:30:53 GMT
+recorded_with: VCR 6.3.1

@@ -1,0 +1,111 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"o1-mini","messages":[{"role":"user","content":"hello world"}]}'
+    headers:
+      Authorization:
+      - Bearer <OPENAI_API_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 23 Feb 2025 14:34:14 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Expose-Headers:
+      - X-Request-ID
+      Openai-Organization:
+      - context-ai
+      Openai-Processing-Ms:
+      - '4674'
+      Openai-Version:
+      - '2020-10-01'
+      X-Ratelimit-Limit-Requests:
+      - '30000'
+      X-Ratelimit-Limit-Tokens:
+      - '150000000'
+      X-Ratelimit-Remaining-Requests:
+      - '29999'
+      X-Ratelimit-Remaining-Tokens:
+      - '149999979'
+      X-Ratelimit-Reset-Requests:
+      - 2ms
+      X-Ratelimit-Reset-Tokens:
+      - 0s
+      X-Request-Id:
+      - req_7601ce6669ed0994f11468e9e69cfe3a
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=oYrx0rXA0NcVhAu6QnLFTlGF17AyWUi93G02GJS2aGs-1740321254-1.0.1.1-jJ1Hqzv.Ay8RklbFB8a3duE1og.KE2y4cHaUqCmNYquxm1fn1cUafjoiaqa4L6.MF1JW4HdHnN5tZKbJdvKWZg;
+        path=/; expires=Sun, 23-Feb-25 15:04:14 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=7Ds4M29LRQHKTMZ_EiDEebFyeBlAYMiicUNNrYUb5zo-1740321254062-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 9167ef5fdfe30c79-MRS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-B47LVRekpidZTo3A1rVQZtzkKCvcq",
+          "object": "chat.completion",
+          "created": 1740321249,
+          "model": "o1-mini-2024-09-12",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "Hello!\n\nIf you're interested in programming, here's how you can write a simple **\"Hello, World!\"** program in a few popular languages:\n\n---\n\n**Python:**\n```python\nprint(\"Hello, World!\")\n```\n\n**JavaScript:**\n```javascript\nconsole.log(\"Hello, World!\");\n```\n\n**Java:**\n```java\npublic class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}\n```\n\n**C#:**\n```csharp\nusing System;\n\nclass Program\n{\n    static void Main()\n    {\n        Console.WriteLine(\"Hello, World!\");\n    }\n}\n```\n\n**Ruby:**\n```ruby\nputs \"Hello, World!\"\n```\n\n---\n\nIf you'd like an example in another programming language or have any other questions, feel free to ask!",
+                "refusal": null
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 10,
+            "completion_tokens": 630,
+            "total_tokens": 640,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 448,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "service_tier": "default",
+          "system_fingerprint": "fp_5c373483f1"
+        }
+  recorded_at: Sun, 23 Feb 2025 14:34:14 GMT
+recorded_with: VCR 6.3.1

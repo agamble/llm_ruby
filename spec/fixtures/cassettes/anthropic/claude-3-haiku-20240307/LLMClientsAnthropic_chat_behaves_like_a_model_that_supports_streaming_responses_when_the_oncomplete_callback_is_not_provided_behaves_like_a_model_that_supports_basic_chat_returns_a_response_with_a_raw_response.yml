@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.anthropic.com/v1/messages
+    body:
+      encoding: UTF-8
+      string: '{"system":"","messages":[{"role":"user","content":"hello world"}],"model":"claude-3-haiku-20240307","max_tokens":4096}'
+    headers:
+      Anthropic-Version:
+      - '2023-06-01'
+      X-Api-Key:
+      - "<ANTHROPIC_API_KEY>"
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 23 Feb 2025 14:26:03 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Anthropic-Ratelimit-Requests-Limit:
+      - '1000'
+      Anthropic-Ratelimit-Requests-Remaining:
+      - '999'
+      Anthropic-Ratelimit-Requests-Reset:
+      - '2025-02-23T14:26:02Z'
+      Anthropic-Ratelimit-Input-Tokens-Limit:
+      - '100000'
+      Anthropic-Ratelimit-Input-Tokens-Remaining:
+      - '100000'
+      Anthropic-Ratelimit-Input-Tokens-Reset:
+      - '2025-02-23T14:26:03Z'
+      Anthropic-Ratelimit-Output-Tokens-Limit:
+      - '20000'
+      Anthropic-Ratelimit-Output-Tokens-Remaining:
+      - '20000'
+      Anthropic-Ratelimit-Output-Tokens-Reset:
+      - '2025-02-23T14:26:03Z'
+      Anthropic-Ratelimit-Tokens-Limit:
+      - '120000'
+      Anthropic-Ratelimit-Tokens-Remaining:
+      - '120000'
+      Anthropic-Ratelimit-Tokens-Reset:
+      - '2025-02-23T14:26:03Z'
+      Request-Id:
+      - req_01D1vjywtVix7fuQrwC5gvh4
+      Anthropic-Organization-Id:
+      - e65d2f81-44ee-4621-a0fb-21d033de8898
+      Via:
+      - 1.1 google
+      Cf-Cache-Status:
+      - DYNAMIC
+      X-Robots-Tag:
+      - none
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 9167e37facd2dd7d-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"msg_01FTCaZZbn2RN5LLBBjmuRRJ","type":"message","role":"assistant","model":"claude-3-haiku-20240307","content":[{"type":"text","text":"Hello!
+        I''m an AI assistant created by Anthropic. I don''t have a physical form,
+        but I''m here to help you with any questions or tasks you may have. How can
+        I assist you today?"}],"stop_reason":"end_turn","stop_sequence":null,"usage":{"input_tokens":9,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":47}}'
+  recorded_at: Sun, 23 Feb 2025 14:26:03 GMT
+recorded_with: VCR 6.3.1

@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.anthropic.com/v1/messages
+    body:
+      encoding: UTF-8
+      string: '{"system":"","messages":[{"role":"user","content":"hello world"}],"model":"claude-3-haiku-20240307","max_tokens":4096}'
+    headers:
+      Anthropic-Version:
+      - '2023-06-01'
+      X-Api-Key:
+      - "<ANTHROPIC_API_KEY>"
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 529
+      message: ''
+    headers:
+      Date:
+      - Sun, 23 Feb 2025 14:25:55 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '75'
+      Connection:
+      - keep-alive
+      X-Should-Retry:
+      - 'true'
+      Request-Id:
+      - req_01KrKyHyCL5tJzNJ5JQaBuFd
+      Anthropic-Organization-Id:
+      - e65d2f81-44ee-4621-a0fb-21d033de8898
+      Via:
+      - 1.1 google
+      Cf-Cache-Status:
+      - DYNAMIC
+      X-Robots-Tag:
+      - none
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 9167e34d1d42bd93-LHR
+    body:
+      encoding: UTF-8
+      string: '{"type":"error","error":{"type":"overloaded_error","message":"Overloaded"}}'
+  recorded_at: Sun, 23 Feb 2025 14:25:55 GMT
+recorded_with: VCR 6.3.1
