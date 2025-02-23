@@ -1,6 +1,10 @@
 # LLMRuby
 
 [![Gem Version](https://badge.fury.io/rb/llm_ruby.svg)](https://badge.fury.io/rb/llm_ruby)
+![Workflow Status](https://github.com/agamble/llm_ruby/actions/workflows/main.yml/badge.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 
 LLMRuby is a Ruby gem that provides a consistent interface for interacting with multiple Large Language Model (LLM) APIs. Most OpenAI, Anthropic and Gemini models are currently supported.
 
