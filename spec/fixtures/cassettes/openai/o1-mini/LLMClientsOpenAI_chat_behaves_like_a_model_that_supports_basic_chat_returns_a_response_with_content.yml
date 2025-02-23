@@ -1,0 +1,111 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"o1-mini","messages":[{"role":"user","content":"hello world"}]}'
+    headers:
+      Authorization:
+      - Bearer <OPENAI_API_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 23 Feb 2025 14:34:09 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Expose-Headers:
+      - X-Request-ID
+      Openai-Organization:
+      - context-ai
+      Openai-Processing-Ms:
+      - '6887'
+      Openai-Version:
+      - '2020-10-01'
+      X-Ratelimit-Limit-Requests:
+      - '30000'
+      X-Ratelimit-Limit-Tokens:
+      - '150000000'
+      X-Ratelimit-Remaining-Requests:
+      - '29999'
+      X-Ratelimit-Remaining-Tokens:
+      - '149999979'
+      X-Ratelimit-Reset-Requests:
+      - 2ms
+      X-Ratelimit-Reset-Tokens:
+      - 0s
+      X-Request-Id:
+      - req_1d543d6e843ce5e7ab5478e0e83a6155
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=P82JF6hZl6u27Tsusb.5_y7wxJGBeQr5I5BIojKM4Rk-1740321249-1.0.1.1-U0LHn7wJWYB_XuFVIIbwDKq4ut3jRvB5z5n1Vjm6Gta4aHqFKl9oBxo9F6l3w_UT_r2D.oXqzpXBqcEUFyjGgA;
+        path=/; expires=Sun, 23-Feb-25 15:04:09 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=sBc.zHgS09cQNxBEenFRBUhwFkQs_X0uDnnmUxoaPn4-1740321249100-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 9167ef32fb4ee1aa-MRS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-B47LOB7VFb3CYXHhH2EvayThebdud",
+          "object": "chat.completion",
+          "created": 1740321242,
+          "model": "o1-mini-2024-09-12",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "Hello! It looks like you're interested in the classic \"Hello, World!\" program. Below are examples in several popular programming languages:\n\n---\n\n### **Python**\n```python\nprint(\"Hello, World!\")\n```\n\n### **Java**\n```java\npublic class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}\n```\n\n### **C++**\n```cpp\n#include <iostream>\n\nint main() {\n    std::cout << \"Hello, World!\" << std::endl;\n    return 0;\n}\n```\n\n### **JavaScript**\n```javascript\nconsole.log(\"Hello, World!\");\n```\n\n### **C#**\n```csharp\nusing System;\n\nclass Program\n{\n    static void Main()\n    {\n        Console.WriteLine(\"Hello, World!\");\n    }\n}\n```\n\n### **Ruby**\n```ruby\nputs \"Hello, World!\"\n```\n\n### **Go**\n```go\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n```\n\n### **PHP**\n```php\n<?php\necho \"Hello, World!\";\n?>\n```\n\n### **Swift**\n```swift\nprint(\"Hello, World!\")\n```\n\n---\n\nIf you have a specific programming language in mind or need further assistance, feel free to ask!",
+                "refusal": null
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 10,
+            "completion_tokens": 729,
+            "total_tokens": 739,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 448,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "service_tier": "default",
+          "system_fingerprint": "fp_5c373483f1"
+        }
+  recorded_at: Sun, 23 Feb 2025 14:34:09 GMT
+recorded_with: VCR 6.3.1

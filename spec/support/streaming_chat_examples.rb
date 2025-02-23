@@ -21,8 +21,8 @@ RSpec.shared_examples "a model that supports streaming responses" do |llm_canoni
 
   it_behaves_like "a model that supports basic chat", llm_canonical_name: llm_canonical_name
 
-  it "returns a response with a content that includes all messages for model #{llm_canonical_name}" do |example|
-    with_vcr(example) do
+  it "returns a response with a content that includes all messages" do |example|
+    with_vcr_for_model(llm, example) do
       expect(response.content).to be_a(String)
     end
   end
