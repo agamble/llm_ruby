@@ -52,4 +52,174 @@ http_interactions:
       string: !binary |-
         ZGF0YTogeyJjYW5kaWRhdGVzIjogW3siY29udGVudCI6IHsicGFydHMiOiBbeyJ0ZXh0IjogIkhlbGxvIHdvcmxkISAifV0sInJvbGUiOiAibW9kZWwifSwiZmluaXNoUmVhc29uIjogIlNUT1AiLCJpbmRleCI6IDAsInNhZmV0eVJhdGluZ3MiOiBbeyJjYXRlZ29yeSI6ICJIQVJNX0NBVEVHT1JZX1NFWFVBTExZX0VYUExJQ0lUIiwicHJvYmFiaWxpdHkiOiAiTkVHTElHSUJMRSJ9LHsiY2F0ZWdvcnkiOiAiSEFSTV9DQVRFR09SWV9IQVRFX1NQRUVDSCIsInByb2JhYmlsaXR5IjogIk5FR0xJR0lCTEUifSx7ImNhdGVnb3J5IjogIkhBUk1fQ0FURUdPUllfSEFSQVNTTUVOVCIsInByb2JhYmlsaXR5IjogIk5FR0xJR0lCTEUifSx7ImNhdGVnb3J5IjogIkhBUk1fQ0FURUdPUllfREFOR0VST1VTX0NPTlRFTlQiLCJwcm9iYWJpbGl0eSI6ICJORUdMSUdJQkxFIn1dfV0sInVzYWdlTWV0YWRhdGEiOiB7InByb21wdFRva2VuQ291bnQiOiAzLCJjYW5kaWRhdGVzVG9rZW5Db3VudCI6IDMsInRvdGFsVG9rZW5Db3VudCI6IDZ9fQ0KDQpkYXRhOiB7ImNhbmRpZGF0ZXMiOiBbeyJjb250ZW50IjogeyJwYXJ0cyI6IFt7InRleHQiOiAiICBJdCdzIG5pY2UgdG8gaGVhciBmcm9tIHlvdS4gV2hhdCBjYW4gSSBkbyBmb3IgeW91IHRvZGF5PyJ9XSwicm9sZSI6ICJtb2RlbCJ9LCJmaW5pc2hSZWFzb24iOiAiU1RPUCIsImluZGV4IjogMCwic2FmZXR5UmF0aW5ncyI6IFt7ImNhdGVnb3J5IjogIkhBUk1fQ0FURUdPUllfU0VYVUFMTFlfRVhQTElDSVQiLCJwcm9iYWJpbGl0eSI6ICJORUdMSUdJQkxFIn0seyJjYXRlZ29yeSI6ICJIQVJNX0NBVEVHT1JZX0hBVEVfU1BFRUNIIiwicHJvYmFiaWxpdHkiOiAiTkVHTElHSUJMRSJ9LHsiY2F0ZWdvcnkiOiAiSEFSTV9DQVRFR09SWV9IQVJBU1NNRU5UIiwicHJvYmFiaWxpdHkiOiAiTkVHTElHSUJMRSJ9LHsiY2F0ZWdvcnkiOiAiSEFSTV9DQVRFR09SWV9EQU5HRVJPVVNfQ09OVEVOVCIsInByb2JhYmlsaXR5IjogIk5FR0xJR0lCTEUifV19XSwidXNhZ2VNZXRhZGF0YSI6IHsicHJvbXB0VG9rZW5Db3VudCI6IDMsImNhbmRpZGF0ZXNUb2tlbkNvdW50IjogMjEsInRvdGFsVG9rZW5Db3VudCI6IDI0fX0NCg0KZGF0YTogeyJjYW5kaWRhdGVzIjogW3siY29udGVudCI6IHsicGFydHMiOiBbeyJ0ZXh0IjogIiDwn5iKIFxuIn1dLCJyb2xlIjogIm1vZGVsIn0sImZpbmlzaFJlYXNvbiI6ICJTVE9QIiwiaW5kZXgiOiAwLCJzYWZldHlSYXRpbmdzIjogW3siY2F0ZWdvcnkiOiAiSEFSTV9DQVRFR09SWV9TRVhVQUxMWV9FWFBMSUNJVCIsInByb2JhYmlsaXR5IjogIk5FR0xJR0lCTEUifSx7ImNhdGVnb3J5IjogIkhBUk1fQ0FURUdPUllfSEFURV9TUEVFQ0giLCJwcm9iYWJpbGl0eSI6ICJORUdMSUdJQkxFIn0seyJjYXRlZ29yeSI6ICJIQVJNX0NBVEVHT1JZX0hBUkFTU01FTlQiLCJwcm9iYWJpbGl0eSI6ICJORUdMSUdJQkxFIn0seyJjYXRlZ29yeSI6ICJIQVJNX0NBVEVHT1JZX0RBTkdFUk9VU19DT05URU5UIiwicHJvYmFiaWxpdHkiOiAiTkVHTElHSUJMRSJ9XX1dLCJ1c2FnZU1ldGFkYXRhIjogeyJwcm9tcHRUb2tlbkNvdW50IjogMywiY2FuZGlkYXRlc1Rva2VuQ291bnQiOiAyMiwidG90YWxUb2tlbkNvdW50IjogMjV9fQ0KDQo=
   recorded_at: Sat, 14 Sep 2024 23:48:55 GMT
+- request:
+    method: post
+    uri: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:streamGenerateContent?alt=sse
+    body:
+      encoding: UTF-8
+      string: '{"systemInstruction":null,"contents":[{"role":"user","parts":[{"text":"hello
+        world"}]}]}'
+    headers:
+      X-Goog-Api-Key:
+      - "<GEMINI_API_KEY>"
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/event-stream
+      Content-Disposition:
+      - attachment
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Sun, 23 Feb 2025 12:50:49 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Server-Timing:
+      - gfet4t7; dur=386
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+    body:
+      encoding: UTF-8
+      string: "data: {\"candidates\": [{\"content\": {\"parts\": [{\"text\": \"Hello\"}],\"role\":
+        \"model\"}}],\"usageMetadata\": {\"promptTokenCount\": 3,\"totalTokenCount\":
+        3},\"modelVersion\": \"gemini-1.5-pro-002\"}\r\n\r\ndata: {\"candidates\":
+        [{\"content\": {\"parts\": [{\"text\": \", world!\\n\"}],\"role\": \"model\"},\"finishReason\":
+        \"STOP\"}],\"usageMetadata\": {\"promptTokenCount\": 2,\"candidatesTokenCount\":
+        5,\"totalTokenCount\": 7,\"promptTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\":
+        2}],\"candidatesTokensDetails\": [{\"modality\": \"TEXT\",\"tokenCount\":
+        5}]},\"modelVersion\": \"gemini-1.5-pro-002\"}\r\n\r\n"
+  recorded_at: Sun, 23 Feb 2025 12:50:49 GMT
+- request:
+    method: post
+    uri: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-exp-0827:streamGenerateContent?alt=sse
+    body:
+      encoding: UTF-8
+      string: '{"systemInstruction":null,"contents":[{"role":"user","parts":[{"text":"hello
+        world"}]}]}'
+    headers:
+      X-Goog-Api-Key:
+      - "<GEMINI_API_KEY>"
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Content-Type:
+      - text/event-stream
+      Date:
+      - Sun, 23 Feb 2025 12:50:58 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '272'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Server-Timing:
+      - gfet4t7; dur=28
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "error": {
+            "code": 404,
+            "message": "models/gemini-1.5-pro-exp-0827 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+            "status": "NOT_FOUND"
+          }
+        }
+  recorded_at: Sun, 23 Feb 2025 12:50:58 GMT
+- request:
+    method: post
+    uri: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-exp-0827:streamGenerateContent?alt=sse
+    body:
+      encoding: UTF-8
+      string: '{"systemInstruction":null,"contents":[{"role":"user","parts":[{"text":"hello
+        world"}]}]}'
+    headers:
+      X-Goog-Api-Key:
+      - "<GEMINI_API_KEY>"
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Content-Type:
+      - text/event-stream
+      Date:
+      - Sun, 23 Feb 2025 12:51:00 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '274'
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Server-Timing:
+      - gfet4t7; dur=23
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "error": {
+            "code": 404,
+            "message": "models/gemini-1.5-flash-exp-0827 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+            "status": "NOT_FOUND"
+          }
+        }
+  recorded_at: Sun, 23 Feb 2025 12:51:00 GMT
 recorded_with: VCR 6.3.1

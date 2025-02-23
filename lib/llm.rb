@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require "zeitwerk"
+require 'zeitwerk'
 loader = Zeitwerk::Loader.for_gem
 loader.inflector.inflect(
-  "llm" => "LLM",
-  "open_ai" => "OpenAI"
+  'llm' => 'LLM',
+  'open_ai' => 'OpenAI'
 )
 loader.setup
 
@@ -22,9 +22,9 @@ class LLM
   end
 
   attr_reader :canonical_name,
-    :display_name,
-    :provider,
-    :default_params
+              :display_name,
+              :provider,
+              :default_params
 
   private
 
