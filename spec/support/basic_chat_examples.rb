@@ -30,4 +30,26 @@ RSpec.shared_examples "a model that supports basic chat" do |llm_canonical_name:
       expect(response.raw_response).to_not be_nil
     end
   end
+
+  context "when the model supports structured outputs" do
+    let(:schema) { LLM::Schema.new("test", {"type" => "object", "properties" => {"name" => {"type" => "string"}, "age" => {"type" => "number"}}, "additionalProperties" => false, "required" => ["name", "age"]}) }
+    subject(:response) { client.chat([{role: :user, content: "hello world"}], response_format: schema.response_format) }
+
+    it "returns a response with a structured output" do |example|
+      next unless llm.supports_structured_outputs?
+
+      with_vcr_for_model(llm, example) do
+        expect(response.structured_output).to be_a(Hash)
+      end
+    end
+
+    it "returns a response with a structured output object" do |example|
+      next unless llm.supports_structured_outputs?
+
+      with_vcr_for_model(llm, example) do
+        expect(response.structured_output_object.name).to be_a(String)
+        expect(response.structured_output_object.age).to be_a(Integer)
+      end
+    end
+  end
 end
