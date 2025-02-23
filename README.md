@@ -148,10 +148,13 @@ LLMRuby supports various OpenAI models, including GPT-3.5 and GPT-4 variants. Yo
 
 ### Google Models
 
-| Canonical Name            | Display Name                             |
-|---------------------------|------------------------------------------|
-| gemini-1.5-flash          | Gemini 1.5 Flash                         |
-| gemini-1.5-pro            | Gemini 1.5 Pro                           |
+| Canonical Name                       | Display Name                             |
+|--------------------------------------|------------------------------------------|
+| gemini-2.0-flash                     | Gemini 2.0 Flash                         |
+| gemini-2.0-flash-lite-preview-02-05  | Gemini 2.0 Flash Lite Preview 02-05      |
+| gemini-1.5-flash                     | Gemini 1.5 Flash                         |
+| gemini-1.5-pro                       | Gemini 1.5 Pro                           |
+| gemini-1.5-flash-8b                  | Gemini 1.5 Flash 8B                      |
 
 ## Configuration
 
