@@ -15,6 +15,7 @@ class LLM
     @provider = model[:provider]
     @client_class = model[:client_class]
     @default_params = model[:additional_default_required_parameters] || {}
+    @supports_structured_outputs = model[:supports_structured_outputs] || false
   end
 
   def client
@@ -25,6 +26,10 @@ class LLM
     :display_name,
     :provider,
     :default_params
+
+  def supports_structured_outputs?
+    @supports_structured_outputs
+  end
 
   private
 

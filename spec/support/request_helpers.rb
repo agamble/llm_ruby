@@ -13,7 +13,7 @@ module RequestHelpers
     cassette = [
       model.provider.to_s,
       model.canonical_name,
-      [parent_groups(example), example.description].flatten.join("_")
+      model_file_name(example)
     ].join("/")
     VCR.use_cassette(cassette, &)
   end
@@ -21,5 +21,13 @@ module RequestHelpers
   def parent_groups(example)
     example.example_group.parent_groups.reverse.map(&:description)
       .map { |s| s.gsub(/[^0-9a-z ]/i, "") }.join(" ")
+  end
+
+  def model_file_name(example)
+    parts = [parent_groups(example), example.description].flatten
+    while parts.join("_").length > 250
+      parts.shift
+    end
+    parts.join("_")
   end
 end
