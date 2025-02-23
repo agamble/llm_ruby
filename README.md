@@ -27,7 +27,7 @@ gem install llm_ruby
 ### Basic Usage
 
 ```ruby
-require 'llm'
+require 'llm_ruby'
 
 # Initialize an LLM instance
 llm = LLM.from_string!("gpt-4")
@@ -46,10 +46,10 @@ puts response.content
 LLMRuby supports streaming responses:
 
 ```ruby
-require 'llm'
+require 'llm_ruby'
 
 # Initialize an LLM instance
-llm = LLM.from_string!("gpt-4")
+llm = LLM.from_string!("gpt-4o")
 
 # Create a client
 client = llm.client
