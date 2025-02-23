@@ -233,13 +233,15 @@ class LLM
         canonical_name: "gemini-2.0-flash",
         display_name: "Gemini 2.0 Flash",
         provider: :google,
-        client_class: LLM::Clients::Gemini
+        client_class: LLM::Clients::Gemini,
+        supports_structured_outputs: true
       },
       {
         canonical_name: "gemini-2.0-flash-lite-preview-02-05",
         display_name: "Gemini 2.0 Flash Lite Preview 02-05",
         provider: :google,
-        client_class: LLM::Clients::Gemini
+        client_class: LLM::Clients::Gemini,
+        supports_structured_outputs: true
       },
       {
         canonical_name: "gemini-1.5-flash-8b",

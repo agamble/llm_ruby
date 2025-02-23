@@ -32,8 +32,8 @@ RSpec.shared_examples "a model that supports basic chat" do |llm_canonical_name:
   end
 
   context "when the model supports structured outputs" do
-    let(:schema) { LLM::Schema.new("test", {"type" => "object", "properties" => {"name" => {"type" => "string"}, "age" => {"type" => "number"}}, "additionalProperties" => false, "required" => ["name", "age"]}) }
-    subject(:response) { client.chat([{role: :user, content: "hello world"}], response_format: schema.response_format) }
+    let(:schema) { LLM::Schema.new("test", {"type" => "object", "properties" => {"name" => {"type" => "string"}, "age" => {"type" => "integer"}}, "additionalProperties" => false, "required" => ["name", "age"]}) }
+    subject(:response) { client.chat([{role: :user, content: "hello world"}], response_format: schema) }
 
     it "returns a response with a structured output" do |example|
       next unless llm.supports_structured_outputs?
