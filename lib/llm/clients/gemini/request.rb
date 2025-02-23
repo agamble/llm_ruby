@@ -14,9 +14,18 @@ class LLM
         end
 
         def params
+          generation_config = {}
+          if options[:response_format]
+            generation_config = {
+              responseMimeType: "application/json",
+              responseSchema: options[:response_format]&.gemini_response_format
+            }
+          end
+
           {
             systemInstruction: normalized_prompt,
-            contents: normalized_messages
+            contents: normalized_messages,
+            generationConfig: generation_config
           }
         end
 

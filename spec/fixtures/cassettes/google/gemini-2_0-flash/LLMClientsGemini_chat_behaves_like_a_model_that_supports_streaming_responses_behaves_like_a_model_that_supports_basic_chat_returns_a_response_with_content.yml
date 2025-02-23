@@ -6,7 +6,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"systemInstruction":null,"contents":[{"role":"user","parts":[{"text":"hello
-        world"}]}]}'
+        world"}]}],"generationConfig":{}}'
     headers:
       X-Goog-Api-Key:
       - "<GEMINI_API_KEY>"
@@ -30,7 +30,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sun, 23 Feb 2025 15:25:43 GMT
+      - Sun, 23 Feb 2025 22:49:43 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -40,7 +40,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=436
+      - gfet4t7; dur=381
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -54,19 +54,19 @@ http_interactions:
               "content": {
                 "parts": [
                   {
-                    "text": "Hello! How can I help you today?\n"
+                    "text": "Hello there! How can I help you today?\n"
                   }
                 ],
                 "role": "model"
               },
               "finishReason": "STOP",
-              "avgLogprobs": -0.097464072704315188
+              "avgLogprobs": -0.088525669141249222
             }
           ],
           "usageMetadata": {
             "promptTokenCount": 2,
-            "candidatesTokenCount": 10,
-            "totalTokenCount": 12,
+            "candidatesTokenCount": 11,
+            "totalTokenCount": 13,
             "promptTokensDetails": [
               {
                 "modality": "TEXT",
@@ -76,11 +76,11 @@ http_interactions:
             "candidatesTokensDetails": [
               {
                 "modality": "TEXT",
-                "tokenCount": 10
+                "tokenCount": 11
               }
             ]
           },
           "modelVersion": "gemini-2.0-flash"
         }
-  recorded_at: Sun, 23 Feb 2025 15:25:43 GMT
+  recorded_at: Sun, 23 Feb 2025 22:49:43 GMT
 recorded_with: VCR 6.3.1

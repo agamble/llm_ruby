@@ -18,7 +18,7 @@ class LLM
           model: @llm.canonical_name,
           messages: messages,
           temperature: options[:temperature],
-          response_format: options[:response_format],
+          response_format: options[:response_format]&.response_format,
           max_tokens: options[:max_output_tokens],
           top_p: options[:top_p],
           stop: options[:stop_sequences],

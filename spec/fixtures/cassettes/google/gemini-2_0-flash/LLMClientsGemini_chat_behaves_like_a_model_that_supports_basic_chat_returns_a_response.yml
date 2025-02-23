@@ -6,7 +6,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"systemInstruction":null,"contents":[{"role":"user","parts":[{"text":"hello
-        world"}]}]}'
+        world"}]}],"generationConfig":{}}'
     headers:
       X-Goog-Api-Key:
       - "<GEMINI_API_KEY>"
@@ -30,7 +30,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sun, 23 Feb 2025 15:25:40 GMT
+      - Sun, 23 Feb 2025 22:48:28 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -40,7 +40,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Server-Timing:
-      - gfet4t7; dur=616
+      - gfet4t7; dur=461
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
@@ -60,7 +60,7 @@ http_interactions:
                 "role": "model"
               },
               "finishReason": "STOP",
-              "avgLogprobs": -0.14210732166583723
+              "avgLogprobs": -0.0653845163492056
             }
           ],
           "usageMetadata": {
@@ -82,5 +82,5 @@ http_interactions:
           },
           "modelVersion": "gemini-2.0-flash"
         }
-  recorded_at: Sun, 23 Feb 2025 15:25:40 GMT
+  recorded_at: Sun, 23 Feb 2025 22:48:28 GMT
 recorded_with: VCR 6.3.1

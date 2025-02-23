@@ -12,7 +12,8 @@ class LLM
           LLM::Response.new(
             content: content,
             raw_response: parsed_response,
-            stop_reason: translated_stop_reason
+            stop_reason: translated_stop_reason,
+            structured_output: structured_output
           )
         end
 
@@ -47,6 +48,12 @@ class LLM
 
         def parsed_response
           raw_response.parsed_response
+        end
+
+        def structured_output
+          @structured_output ||= JSON.parse(parsed_response.dig("candidates", 0, "content", "parts", 0, "text"))
+        rescue JSON::ParserError
+          nil
         end
       end
     end
