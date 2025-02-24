@@ -5,7 +5,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-
 LLMRuby is a Ruby gem that provides a consistent interface for interacting with multiple Large Language Model (LLM) APIs. Most OpenAI, Anthropic and Gemini models are currently supported.
 
 ## Installation
@@ -170,6 +169,26 @@ Set your OpenAI, Anthropic or Google API key as an environment variable:
 export OPENAI_API_KEY=your_api_key_here
 export ANTHROPIC_API_KEY=your_api_key_here
 export GEMINI_API_KEY=your_api_key_here
+```
+
+## Structured Outputs
+
+OpenAI and Gemini models can be configured to generate responses that adhere to a provided schema. Even though each use a different format for configuring this schema, `llm_ruby` can handle the translation for you, so that you can share a single schema definition across models.
+
+```ruby
+
+llm = LLM.from_string!("gpt-4o")
+
+# Create a client
+client = llm.client
+
+# Send a chat message
+response_format = LLM::Schema.new("test_schema", {"type" => "object", "properties" => {"name" => {"type" => "string"}, "age" => {"type" => "integer"}}, "additionalProperties" => false, "required" => ["name", "age"]})
+# or load the schema from a file: LLM::Schema.from_file('myschema.json')
+response = client.chat([{role: :user, content: "Hello, world!"}], response_format: response_format)
+
+response.structured_output[:name] # Alex
+response.structured_output_object.name # Alex
 ```
 
 ## Development
