@@ -5,7 +5,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-
 LLMRuby is a Ruby gem that provides a consistent interface for interacting with multiple Large Language Model (LLM) APIs. Most OpenAI, Anthropic and Gemini models are currently supported.
 
 ## Installation
