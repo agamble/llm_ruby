@@ -11,6 +11,7 @@ class LLM
 
       def initialize(llm:)
         @llm = llm
+        @logger = LLM.config.logger
       end
 
       def chat(messages, options = {})
@@ -95,7 +96,10 @@ class LLM
       end
 
       def post_url(url, **kwargs)
-        self.class.post(url, **kwargs.merge(headers: default_headers))
+        @logger.debug("Request: #{kwargs.inspect}")
+        resp = self.class.post(url, **kwargs.merge(headers: default_headers))
+        @logger.debug("Response: #{resp.body}")
+        resp
       end
 
       def post_url_streaming(url, **kwargs, &block)

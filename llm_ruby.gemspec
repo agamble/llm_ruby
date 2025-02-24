@@ -30,6 +30,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "event_stream_parser", "~> 1.0.0"
   spec.add_dependency "httparty", "~> 0.22.0"
   spec.add_dependency "zeitwerk", "~> 2.6.0"
+  spec.add_dependency "logger", "~> 1.6.0"
 
   spec.add_development_dependency "dotenv", "~> 3.1.0"
   spec.add_development_dependency "rake", "~> 13.0"
