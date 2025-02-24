@@ -33,6 +33,10 @@ class LLM
     @supports_structured_outputs
   end
 
+  def self.config
+    @config ||= LLM::Config.new
+  end
+
   private
 
   attr_reader :client_class
