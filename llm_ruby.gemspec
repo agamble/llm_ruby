@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "llm_ruby"
-  spec.version = "0.2.0"
+  spec.version = "0.3.0"
   spec.authors = ["Alex Gamble"]
 
   spec.summary = "A client to interact with LLM APIs in a consistent way."
