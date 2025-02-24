@@ -1,11 +1,13 @@
 # frozen_string_literal: true
 
 require "zeitwerk"
+
 loader = Zeitwerk::Loader.for_gem
 loader.inflector.inflect(
   "llm" => "LLM",
   "open_ai" => "OpenAI"
 )
+loader.ignore("#{__dir__}/llm_ruby.rb")
 loader.setup
 
 class LLM
