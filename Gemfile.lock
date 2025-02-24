@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    llm_ruby (0.3.0)
+    llm_ruby (0.3.1)
       event_stream_parser (~> 1.0.0)
       httparty (~> 0.22.0)
       zeitwerk (~> 2.6.0)
